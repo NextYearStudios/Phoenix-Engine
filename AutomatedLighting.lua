@@ -19,10 +19,10 @@ while true do
 	local MinutesAfterMidnight = game.Lighting:GetMinutesAfterMidnight()
 	local OAAN = 127 - (127/192)*(16*(math.floor(MinutesAfterMidnight / 60)-12))
 	local OAMN = 127 + (127/192)*(16*(math.floor(MinutesAfterMidnight / 60)-12))
-  Lighting.Outlines = Outlines
-  Lighting.Ambient = Ambient
-  Lighting.ColorShift_Bottom = ColorShift_Bottom
-  Lighting.ColorShift_Top = ColorShift_Top
+  	Lighting.Outlines = Outlines
+  	Lighting.Ambient = Ambient
+  	Lighting.ColorShift_Bottom = ColorShift_Bottom
+  	Lighting.ColorShift_Top = ColorShift_Top
 	if math.floor(MinutesAfterMidnight / 60) > 12 then
 		Lighting.Brightness = Brightness - ((Brightness/12) * (math.floor(MinutesAfterMidnight / 60)-12))		
 		Lighting.OutdoorAmbient = Color3.fromRGB(OAAN,OAAN,OAAN)
